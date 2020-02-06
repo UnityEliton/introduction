@@ -30,6 +30,19 @@ public class Conversor : MonoBehaviour
     	return km; // retornando o valor de km
     }
 
+    void areacirculo()
+    {
+        float raio = float.Parse(inputEntrada.text);
+        float area = 3.14f * raio * raio;
+        textSaida.text = area.ToString();
+    }
+
+    float areacirculo1(string raioText)
+    {
+        float raio = float.Parse(raioText);
+        float area = 3.14f * raio * raio;
+        return area;
+    }
     void comandos()
     {
     	if (inputComando.text == "quadrado") {
@@ -47,6 +60,15 @@ public class Conversor : MonoBehaviour
 			float km = m2km(inputEntrada.text);
 			textSaida.text = km.ToString();
 		}
+        else if ( inputComando.text == "areacirculo")
+        {
+            float area = areacirculo1(inputEntrada.text);
+            textSaida.text = area.ToString();
+            // areacirculo();
+            // float raio = float.Parse(inputEntrada.text);
+            // float area = 3.14f * raio * raio;
+            // textSaida.text = area.ToString();
+        }
 		else
 		{
 			textSaida.text = "Comando inválido";
