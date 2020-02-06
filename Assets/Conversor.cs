@@ -14,7 +14,7 @@ public class Conversor : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        buttonGo.onClick.AddListener(comandos);
+        buttonGo.onClick.AddListener(comandosSwitch);
     }
 
     void km2m(){
@@ -43,6 +43,34 @@ public class Conversor : MonoBehaviour
         float area = 3.14f * raio * raio;
         return area;
     }
+
+    void comandosSwitch()
+    {
+        // https://docs.microsoft.com/pt-br/dotnet/
+        // csharp/language-reference/keywords/switch
+        switch (inputComando.text)
+        {
+            case "quadrado":
+                float num = float.Parse(inputEntrada.text);
+                float resultado = num * num;
+                textSaida.text = resultado.ToString();
+                break;
+            case "showmethething":
+                imagem.enabled = true;
+                break;
+            case "km2m":
+                km2m();
+                break;
+            case "m2km":
+                float km = m2km(inputEntrada.text);
+                textSaida.text = km.ToString();
+                break;
+            default:
+                textSaida.text = "Comando inválido";
+                break;
+        }
+    }
+
     void comandos()
     {
     	if (inputComando.text == "quadrado") {
