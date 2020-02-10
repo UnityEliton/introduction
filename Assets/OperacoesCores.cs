@@ -17,13 +17,14 @@ public class OperacoesCores : MonoBehaviour
 
     void operacoes()
     {
-        float numero = float.Parse(inputEntrada.text);
+        float dadoDeEntrada = float.Parse(inputEntrada.text);
+        bool variavelBooleana;
 
-        if (numero == 1)
+        if (dadoDeEntrada == 1)
         {
             imagem.color = new Color( 255, 255 , 255 , 100);
         }
-        else if (numero >= 2)
+        else if (dadoDeEntrada >= 2)
         {
             imagem.color = Color.cyan;
         }
@@ -32,11 +33,11 @@ public class OperacoesCores : MonoBehaviour
             imagem.color = Color.black;
         }
 
-        if (numero > 1)
+        if (dadoDeEntrada > 1)
         {
             imagem2.color = Color.blue;
         }
-        else if (numero <= 3)
+        else if (dadoDeEntrada <= 3)
         {
             imagem2.color = Color.magenta;
         }
