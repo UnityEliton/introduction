@@ -32,11 +32,9 @@ public class OperacoesCores : MonoBehaviour
         {   varBoolY = true;   }
         else{  varBoolY = false;   }
         if (varBoolX && varBoolY)
-        {
-            imagem.color = Color.green;
+        {   imagem.color = Color.green;
             imagem2.color = Color.green;
-        }
-        else{
+        } else{
             imagem.color = Color.red;
             imagem2.color = Color.red;
         }
@@ -44,35 +42,39 @@ public class OperacoesCores : MonoBehaviour
 
     void tabelaOr()
     {
+        bool varBoolX;
+        bool varBoolY;
+        if (inputEntradaX.text == "true")
+        { varBoolX = true; }
+        else { varBoolX = false; }
+        if (inputEntradaY.text == "true")
+        { varBoolY = true; }
+        else { varBoolY = false; }
 
+        if (varBoolX || varBoolY)
+        {   imagem.color = Color.green;
+            imagem2.color = Color.green;
+        } else
+        {   imagem.color = Color.red;
+            imagem2.color = Color.red;
+        }
     }
 
-    void operacoes()
-    {
+    void operacoes()    {
         float dadoDeEntrada = float.Parse(inputEntrada.text);
         
-        if (dadoDeEntrada == 1)
-        {
+        if (dadoDeEntrada == 1){
             imagem.color = new Color( 255, 255 , 255 , 100);
-        }
-        else if (dadoDeEntrada >= 2)
-        {
+        }        else if (  (dadoDeEntrada >= 2) && 
+                            (dadoDeEntrada > 1) ) {
             imagem.color = Color.cyan;
-        }
-        else
-        {
+            imagem2.color = Color.blue;
+        }else if (dadoDeEntrada <= 3)   {
+            imagem2.color = Color.magenta;
+        }   else  {
             imagem.color = Color.black;
         }
-
-        if (dadoDeEntrada > 1)
-        {
-            imagem2.color = Color.blue;
-        }
-        else if (dadoDeEntrada <= 3)
-        {
-            imagem2.color = Color.magenta;
-        } 
-        
+                
     }
 
     // Update is called once per frame
