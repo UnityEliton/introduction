@@ -16,10 +16,11 @@ public class Fatorial : MonoBehaviour
 
     void doFatorial()
     {
-        int fatorial = int.Parse(inputFat.text);
-        int indice = 1;
-        int resultado = 1;
-        while(indice <= fatorial)
+        // https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
+        ulong fatorial = ulong.Parse(inputFat.text);
+        ulong indice = 1;
+        ulong resultado = 1;
+        while (indice <= fatorial)
         {
             resultado = indice * resultado;
             indice = indice + 1;
