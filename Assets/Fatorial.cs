@@ -15,7 +15,7 @@ public class Fatorial : MonoBehaviour
     }
 
     void doFatorial()
-    {
+    { 
         // https://docs.microsoft.com/pt-br/dotnet/csharp/language-reference/builtin-types/integral-numeric-types
         ulong fatorial = ulong.Parse(inputFat.text);
         ulong indice = 1;
