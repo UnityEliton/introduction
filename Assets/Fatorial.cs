@@ -11,7 +11,7 @@ public class Fatorial : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        go.onClick.AddListener(doFatorial);
+        go.onClick.AddListener(doFatorialFor);
     }
 
     void doFatorial()
@@ -26,6 +26,20 @@ public class Fatorial : MonoBehaviour
             indice = indice + 1;
         }
         textResultado.text = resultado.ToString();
+        
+    }
+
+    void doFatorialFor()
+    {
+        ulong fatorial  = ulong.Parse(inputFat.text);
+        ulong resultado = 1;
+
+        for (ulong i = 1; i <= fatorial; i++ /* i = i+1*/ )
+        {
+            resultado = i * resultado;
+        }
+        textResultado.text = resultado.ToString();
+
     }
 
     // Update is called once per frame
