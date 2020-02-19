@@ -6,12 +6,27 @@ using UnityEngine.UI;
 public class Fatorial : MonoBehaviour
 {
     public Button go;
+    public Button somatorioButton;
     public Text textResultado;
     public InputField inputFat;
     // Start is called before the first frame update
     void Start()
     {
         go.onClick.AddListener(doFatorialFor);
+        somatorioButton.onClick.AddListener(somatorio);
+    }
+
+    void somatorio()
+    {
+        uint soma = 0;
+        uint n = uint.Parse( inputFat.text );
+        for(uint i = 0; i <=  n; i++)
+        {
+            soma = soma + i;
+            //print("Soma: " + soma);
+            //print("i: " + i);
+        }
+        textResultado.text = soma.ToString();
     }
 
     void doFatorial()
