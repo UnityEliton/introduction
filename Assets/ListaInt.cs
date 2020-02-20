@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
 public class ListaInt : MonoBehaviour
 {
     public Text textResultado;
     public Button buttonAdd;
+    public Button buttonRemove;
     public InputField entradaDados;
     string texto = "Vazia";
     List<int> listaNumeros = new List<int>();
@@ -14,6 +14,17 @@ public class ListaInt : MonoBehaviour
     void Start()
     {
         buttonAdd.onClick.AddListener(addInt);
+        buttonRemove.onClick.AddListener(removeInt);
+    }
+
+    void removeInt()
+    {
+        int num = int.Parse(entradaDados.text);
+        if (listaNumeros.Contains(num))
+            listaNumeros.Remove(num);
+        else
+            print("Número não está na lista");
+        print(num);
     }
     void addInt()
     {
