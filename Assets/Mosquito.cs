@@ -15,6 +15,8 @@ public class Mosquito : MonoBehaviour
     {
         gerenteObjeto.GetComponent<Gerente>().
             listObjects.Remove(this.gameObject);
+        gerenteObjeto.GetComponent<Gerente>().
+            totalMosquitosMortos++; // total = total + 1
         Destroy(this.gameObject);
     }
 

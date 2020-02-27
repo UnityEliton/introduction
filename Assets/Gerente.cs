@@ -7,19 +7,18 @@ public class Gerente : MonoBehaviour
 {
     public List<GameObject> listObjects = 
         new List<GameObject>();
-    int totalMosquitos;
+    public int totalMosquitosMortos;
     public Text textPontos;
     // Start is called before the first frame update
     void Start()
     {
-        totalMosquitos = listObjects.Count;
-        textPontos.text = "0";
+        totalMosquitosMortos = 0;
+        textPontos.text = totalMosquitosMortos.ToString();
     }
 
     // Update is called once per frame
     void Update()
     {
-        int pontos = totalMosquitos - listObjects.Count;
-        textPontos.text = pontos.ToString();
+        textPontos.text = totalMosquitosMortos.ToString();
     }
 }
