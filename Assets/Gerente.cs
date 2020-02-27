@@ -9,6 +9,7 @@ public class Gerente : MonoBehaviour
         new List<GameObject>();
     public int totalMosquitosMortos;
     public Text textPontos;
+    public Text mensagemFinal;
     // Start is called before the first frame update
     void Start()
     {
@@ -20,5 +21,10 @@ public class Gerente : MonoBehaviour
     void Update()
     {
         textPontos.text = totalMosquitosMortos.ToString();
+        if (listObjects.Count == 0)
+        {
+            mensagemFinal.enabled = true;
+            mensagemFinal.gameObject.SetActive(true);
+        }
     }
 }
