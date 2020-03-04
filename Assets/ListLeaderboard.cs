@@ -21,12 +21,14 @@ public class ListLeaderboard : MonoBehaviour
 
     void removeUser()
     {
-        /*int num = int.Parse(entradaDados.text);
+        /*
+         * int num = int.Parse(entradaDados.text);
         if (listaNumeros.Contains(num))
             listaNumeros.Remove(num);
         else
             print("Número não está na lista");
-        print(num);*/
+        print(num);
+        */
     }
     void addUser()
     {
