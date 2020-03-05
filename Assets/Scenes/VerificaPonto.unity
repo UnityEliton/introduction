@@ -258,8 +258,8 @@ MonoBehaviour:
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
-    m_HorizontalOverflow: 0
-    m_VerticalOverflow: 0
+    m_HorizontalOverflow: 1
+    m_VerticalOverflow: 1
     m_LineSpacing: 1
   m_Text: New Text
 --- !u!222 &78555231
@@ -722,8 +722,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 870194864}
+  - component: {fileID: 870194865}
   m_Layer: 5
-  m_Name: Verificador
+  m_Name: GameObjectVerificador
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -748,6 +749,22 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &870194865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 870194863}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fba686ee747abec468446c8cba89a801, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputFieldX: {fileID: 230644148}
+  inputFieldY: {fileID: 321506385}
+  buttonverifique: {fileID: 919069897}
+  textResposta: {fileID: 78555230}
 --- !u!1 &919069895
 GameObject:
   m_ObjectHideFlags: 0
