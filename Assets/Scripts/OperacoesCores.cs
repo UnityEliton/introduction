@@ -65,8 +65,8 @@ public class OperacoesCores : MonoBehaviour
         
         if (dadoDeEntrada == 1){
             imagem.color = new Color( 255, 255 , 255 , 100);
-        }        else if (  (dadoDeEntrada >= 2) && 
-                            (dadoDeEntrada > 1) ) {
+        }else if (  (dadoDeEntrada >= 2) && 
+                    (dadoDeEntrada > 1) ) {
             imagem.color = Color.cyan;
             imagem2.color = Color.blue;
         }else if (dadoDeEntrada <= 3)   {
