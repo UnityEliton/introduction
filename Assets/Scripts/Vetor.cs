@@ -1,4 +1,5 @@
 ﻿using System.Collections;
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,7 +10,8 @@ public class Vetor : MonoBehaviour
     public InputField inputFieldIndice;
     public Button botaoGo;
     public Text texto;
-    int[] vetorInteiros = new int[4];
+    const int tamanhoVetor = 5;
+    Int32[] vetorInteiros = new int[tamanhoVetor];
     // int variavel;
     // Start is called before the first frame update
     void Start()
@@ -28,6 +30,12 @@ public class Vetor : MonoBehaviour
     void Update()
     {
         string txt = "| ";
+        /*
+        for (int j = 0; j < tamanhoVetor; j++)
+        {
+            txt = txt + vetorInteiros[j].ToString() + " | ";
+        }
+        */
 
         foreach ( var i in vetorInteiros)
         {
